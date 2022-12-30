@@ -1,0 +1,22 @@
+Task 1:
+start_postgres
+
+Task 2:
+Step 1: Connect to the database:
+	psql --username=postgres --host=localhost
+Step 2: At the postgres=# prompt, run the following command to connect to the database ‘mydatabase’.
+	\c mydatabase;
+Step 3: Once you connect to the database, run the command to create the table called ‘access_log’:
+	CREATE TABLE access_log(timestamp TIMESTAMP, latitude float, longitude float, visitor_id char(37));
+Step 4: Once you receive the confirmation message ‘CREATE TABLE’, quit from psql:
+	\q
+
+Task 3 to Task 9:
+All tasks solution is in “cp-access-log.sh”.
+
+Task 10:
+	bash cp-access-log.sh
+
+Task 11:
+	echo '\c mydatabase; \\SELECT * from access_log;' | psql --username=postgres --host=localhost
+
